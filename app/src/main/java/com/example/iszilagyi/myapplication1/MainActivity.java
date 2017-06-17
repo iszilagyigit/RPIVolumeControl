@@ -93,15 +93,17 @@ public class MainActivity extends AppCompatActivity {
             Logger.getGlobal().severe(" Error " + ex.getMessage());
         }
     }
-    public void sendMessage(View view) {
-        Logger.getGlobal().info("exiting application");
+    public void closeApplication(View view) {
+        Logger.getGlobal().info("closeApplication method called");
         WiringPi.releaseGPIOs();
+        //TODO check doc. if  this is ok?
         System.exit(0);
     }
 
     @Override
     protected void onDestroy() {
-        // TODO stop thread.
+        Logger.getGlobal().info("onDestroy method called");
+        //TODO stop thread.
         super.onDestroy();
     }
 
