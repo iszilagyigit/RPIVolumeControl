@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         final int DT =  13; //a
         final int CLK = 19; //b
         final int MS =  6; //s (reset)
+        final boolean LISTEN_DEFAULT = true;
 
         tv.setText("Example text " + GPIOReady);
 
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 int currentClkStatus = -1;
                 boolean rotaryListen = false;
                 int flag = 0;
-                boolean listen = false;
+                boolean listen = LISTEN_DEFAULT;
                 while (true) {
                      if (WiringPi.digitalRead(MS) == 0 ) {
                          listen = ! listen;
