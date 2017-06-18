@@ -23,19 +23,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:text="CloseAp"
-        android:onClick="sendMessage"
+        android:onClick="closeApplication"
         app:layout_constraintTop_toBottomOf="@+id/sample_text"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent" />
-
-    <SeekBar
-        android:id="@+id/soundSeekBar"
-        android:layout_width="344dp"
-        android:layout_height="25dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
 
 </android.support.constraint.ConstraintLayout>

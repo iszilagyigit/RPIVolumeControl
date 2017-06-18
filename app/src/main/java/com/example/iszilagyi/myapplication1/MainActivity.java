@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
                          msbBar.setText(listen ? "ROTARY ENCODER IS ON." : "ROTARY ENCODER IS OFF");
                          msbBar.show();
-                         //am.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI);
                          delayMS(5000);
                          msbBar.dismiss();
                      }

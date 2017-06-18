@@ -19,16 +19,5 @@ public final class WiringPi {
     public static native void releaseGPIOs();
 
     public static native int digitalRead     (int pin);
-
-
-/*
-    public static native void pinMode             (int pin, int mode) ;
-    public static native void pullUpDnControl     (int pin, int pud) ;
-
-
-    public static native void initRotaryEncoder(int  RoDT_Pin, int  RoCLK_Pin, int  RoMS_Pin);
-    public static native void rotaryDeal();
-    public static native int readRotaryCounter();
-*/
 }
 
