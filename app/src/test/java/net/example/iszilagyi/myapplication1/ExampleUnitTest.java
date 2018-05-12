@@ -1,4 +1,4 @@
-package com.example.iszilagyi.myapplication1;
+package net.example.iszilagyi.myapplication1;
 
 import org.junit.Test;
 

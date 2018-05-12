@@ -1,4 +1,4 @@
-package com.example.iszilagyi.myapplication1;
+package net.example.iszilagyi.myapplication1;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.ifactory.gpio.WiringPi;
+import net.iszilagyi.gpio.WiringPi;
 
 import java.util.logging.Logger;
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        msbBar = Snackbar.make(findViewById(android.R.id.content), "Had a snack at Snackbar", Snackbar.LENGTH_LONG);
+        msbBar = Snackbar.make(findViewById(android.R.id.content), "_________________________", Snackbar.LENGTH_LONG);
 
 
         // Example of a call to a native method
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         final int MS =  6; //s (reset)
         final boolean LISTEN_DEFAULT = true;
 
-        tv.setText("Example text " + GPIOReady);
+        tv.setText("GPIO Ready result " + GPIOReady);
 
         final AudioManager  am = (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
         Logger.getGlobal().info("Audio manager "  + am);

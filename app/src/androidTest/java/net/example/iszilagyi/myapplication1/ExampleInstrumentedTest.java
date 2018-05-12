@@ -1,4 +1,4 @@
-package com.example.iszilagyi.myapplication1;
+package net.example.iszilagyi.myapplication1;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

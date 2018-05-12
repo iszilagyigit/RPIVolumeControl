@@ -1,6 +1,8 @@
 //
 // Created by iszilagyi on 5/7/17.
 // /home/iszilagyi/work/arm7-ndk/wiringPi/
+//
+// Code is based on wiringPi library.
 
 #include <stdio.h>
 #include <fcntl.h>
@@ -32,7 +34,7 @@ static int sysFdsMode [64] =
 /*
  * Read all file descriptors
  */
-extern "C" JNIEXPORT jint JNICALL  Java_com_ifactory_gpio_WiringPi_initGPIOs(
+extern "C" JNIEXPORT jint JNICALL  Java_net_iszilagyi_gpio_WiringPi_initGPIOs(
         JNIEnv* env,
         jobject /* this */) {
     //return wiringPiSetupSys();
@@ -72,7 +74,7 @@ extern "C" JNIEXPORT jint JNICALL  Java_com_ifactory_gpio_WiringPi_initGPIOs(
     return 0;
 }
 
-extern "C" JNIEXPORT void JNICALL  Java_com_ifactory_gpio_WiringPi_releaseGPIOs(
+extern "C" JNIEXPORT void JNICALL  Java_net_iszilagyi_gpio_WiringPi_releaseGPIOs(
         JNIEnv* env,
         jobject /* this */) {
     __android_log_write(ANDROID_LOG_VERBOSE, "WiringPi", "releaseGPIOs");
@@ -89,7 +91,7 @@ extern "C" JNIEXPORT void JNICALL  Java_com_ifactory_gpio_WiringPi_releaseGPIOs(
     }
 }
 extern "C" JNIEXPORT jint JNICALL
-Java_com_ifactory_gpio_WiringPi_digitalRead (JNIEnv *env,  jobject callingObject,
+Java_net_iszilagyi_gpio_WiringPi_digitalRead (JNIEnv *env,  jobject callingObject,
                                              jint jpin )  {
 
     int pin = (int) jpin;
